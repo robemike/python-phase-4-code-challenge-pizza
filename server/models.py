@@ -92,3 +92,4 @@ class RestaurantPizza(db.Model, SerializerMixin):
 # Therefore, one to many relationship betweeen the association model and the related models.
 # one to many relationship between restaurant and the restaurant_pizzas table.(One row in the restaurants table related to many rows in the restaurants_pizzas table)
 # One-to-many relationship between pizzas and restaurant_pizzas table. (One row in the pizzas table related to many rows in the restaurant_pizzas table)
+# Don't forget about the validations.
