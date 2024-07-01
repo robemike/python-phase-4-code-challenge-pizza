@@ -70,7 +70,7 @@ def restaurants_by_id(id):
              db.session.delete(restaurant)
             #  After every SQL operation, we need to commit our changes.
              db.session.commit()
-             body = {"Deleted": True, "msg":"Restaurant deleted"}
+             body = {"Deleted": True, "msg":"Deleted restaurant."}
              response = make_response(body, 204)
              return response
         else:
@@ -123,7 +123,7 @@ def restaurant_pizzas():
                 restaurant_id = json_data.get("restaurant_id"),
                 pizza_id = json_data.get("pizza_id")
             )
-        except ValueError as exc:
+        except ValueError:
             response_body = {"errors": ["validation errors"]}
             status = 400
             return (response_body, status)
